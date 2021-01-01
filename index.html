@@ -1,0 +1,644 @@
+<!doctype html>
+<html>
+    
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no, minimal-ui">
+        <title>Daniel Wong Yong Shen</title>
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+        rel="stylesheet">
+        <style>
+            /* Utils */
+            /*----- Colors -----*/
+            /*----- Fonts -----*/
+            /*----- Dimensions and sizes -----*/
+            /* Base */
+            @font-face {
+              font-family: 'Josefin Sans';
+              font-style: normal;
+              font-weight: 300;
+              src: url(https://fonts.gstatic.com/s/josefinsans/v16/Qw3PZQNVED7rKGKxtqIqX5E-AVSJrOCfjY46_GbQbMZhKg.ttf) format('truetype');
+            }
+            @font-face {
+              font-family: 'Josefin Sans';
+              font-style: normal;
+              font-weight: 700;
+              src: url(https://fonts.gstatic.com/s/josefinsans/v16/Qw3PZQNVED7rKGKxtqIqX5E-AVSJrOCfjY46_N_XbMZhKg.ttf) format('truetype');
+            }
+            @font-face {
+              font-family: 'Lato';
+              font-style: italic;
+              font-weight: 300;
+              src: url(https://fonts.gstatic.com/s/lato/v17/S6u_w4BMUTPHjxsI9w2_Gwfo.ttf) format('truetype');
+            }
+            @font-face {
+              font-family: 'Lato';
+              font-style: italic;
+              font-weight: 400;
+              src: url(https://fonts.gstatic.com/s/lato/v17/S6u8w4BMUTPHjxsAXC-v.ttf) format('truetype');
+            }
+            @font-face {
+              font-family: 'Lato';
+              font-style: italic;
+              font-weight: 700;
+              src: url(https://fonts.gstatic.com/s/lato/v17/S6u_w4BMUTPHjxsI5wq_Gwfo.ttf) format('truetype');
+            }
+            @font-face {
+              font-family: 'Lato';
+              font-style: normal;
+              font-weight: 300;
+              src: url(https://fonts.gstatic.com/s/lato/v17/S6u9w4BMUTPHh7USSwiPHA.ttf) format('truetype');
+            }
+            @font-face {
+              font-family: 'Lato';
+              font-style: normal;
+              font-weight: 400;
+              src: url(https://fonts.gstatic.com/s/lato/v17/S6uyw4BMUTPHjx4wWw.ttf) format('truetype');
+            }
+            @font-face {
+              font-family: 'Lato';
+              font-style: normal;
+              font-weight: 700;
+              src: url(https://fonts.gstatic.com/s/lato/v17/S6u9w4BMUTPHh6UVSwiPHA.ttf) format('truetype');
+            }
+            
+            body {
+              font-family: "Lato", Helvetica, Arial, sans-serif;
+              font-weight: 400;
+              background: #f8f8f8;
+              margin: 50px 0 100px;
+              letter-spacing: .3px;
+              color: #39424B; }
+            
+            h1, h2, h3, h4, h5, h6 {
+              text-transform: uppercase;
+              margin: 0; }
+            
+            h1 {
+              font-family: "Josefin Sans", Helvetica, Arial, sans-serif;
+              font-weight: 700;
+              font-size: 40px;
+              letter-spacing: 1px; }
+            
+            h2 {
+              font-family: "Josefin Sans", Helvetica, Arial, sans-serif;
+              font-weight: 300;
+              font-size: 16px;
+              letter-spacing: .5px; }
+            
+            h3 {
+              font-family: "Lato", Helvetica, Arial, sans-serif;
+              font-weight: 300;
+              font-size: 14px;
+              letter-spacing: .4px; }
+              h3.bold {
+                font-weight: 700; }
+            
+            h4 {
+              font-family: "Lato", Helvetica, Arial, sans-serif;
+              font-weight: 300;
+              font-size: 12px; }
+              h4.bold {
+                font-weight: 700; }
+            
+            h5 {
+              font-family: "Lato", Helvetica, Arial, sans-serif;
+              font-weight: 300;
+              font-size: 11px; }
+              h5.italic {
+                font-style: italic; }
+            
+            h6 {
+              font-family: "Lato", Helvetica, Arial, sans-serif;
+              font-weight: 400;
+              font-size: 10px; }
+            
+            a {
+              color: inherit;
+              text-decoration: inherit; }
+              a:hover {
+                color: #2895F1; }
+              a .fa-external-link {
+                font-size: 10px;
+                vertical-align: text-top; }
+            
+            p,
+            li {
+              font-size: 11px; }
+            
+            blockquote {
+              font-size: 11px;
+              font-family: "Lato", Helvetica, Arial, sans-serif;
+              font-weight: 400;
+              font-style: italic;
+              margin: 10px 25px; }
+            
+            em {
+              color: #999; }
+            
+            ul {
+              margin: 10px 0 0;
+              -webkit-padding-start: 25px; }
+              ul li {
+                padding-left: 10px; }
+              ul.minimal {
+                list-style: none;
+                padding: 0; }
+                ul.minimal li {
+                  margin-bottom: 3px;
+                  padding-left: 0; }
+              ul.two-column {
+                -webkit-column-count: 2;
+                -webkit-column-gap: 28px;
+                column-count: 2;
+                column-gap: 28px; }
+                ul.two-column li {
+                  padding-left: 0; }
+            
+            @page {
+              size: A4; }
+            
+            .container {
+              padding-top: 20px; }
+            
+            .keyline {
+              width: 45px;
+              margin: 8px 0 10px;
+              border-top: 1px solid #56817A; }
+            
+            .pull-left {
+              float: left; }
+            
+            .pull-right {
+              float: right; }
+            
+            .clearfix:after {
+              content: "";
+              display: table;
+              clear: both; }
+            
+            .profile-pic {
+              margin-top: -5px;
+              margin-right: 18px; }
+              .profile-pic img {
+                height: 52px;
+                width: 52px;
+                border-radius: 50%;
+                border: 2px solid #56817A; }
+            
+            .summary {
+              margin: 5px 0 5px; }
+            
+            /* Layouts */
+            .page {
+              background: white;
+              width: 612px;
+              min-height: 792px;
+              display: block;
+              margin: 0 auto;
+              border-top: 10px solid #56817A;
+              padding: 36px 22px 30px 34px;
+              box-shadow: 0 1px 10px rgba(0, 0, 0, 0.5); }
+              .page:after {
+                content: "";
+                display: table;
+                clear: both; }
+            
+            .left-column {
+              float: left;
+              width: 160px;
+              margin-right: 20px;
+              word-wrap: break-word; }
+            
+            .right-column {
+              width: auto;
+              overflow: hidden; }
+            
+            .item {
+              margin-bottom: 15px; }
+              .item:last-child {
+                margin-bottom: 0; }
+            
+            @media print {
+              body {
+                margin: 0; }
+              .page {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 36px 0 30px;
+                box-shadow: none; }
+                .page .resume-header,
+                .page .resume-content {
+                  padding: 0 22px 0 34px; }
+              .container {
+                page-break-inside: avoid; }
+              .work-container .item {
+                page-break-inside: avoid; }
+              .fa-external-link {
+                display: none; } }
+            
+            /* Components */
+            .info-tag-container {
+              margin-bottom: 5px; }
+              .info-tag-container .fa {
+                font-size: 14px;
+                width: 12px;
+                margin-right: 5px;
+                text-align: center;
+                vertical-align: middle; }
+                .info-tag-container .fa.fa-map-marker {
+                  font-size: 16px; }
+                .info-tag-container .fa.fa-mobile {
+                  font-size: 18px; }
+                .info-tag-container .fa.fa-envelope-o {
+                  font-size: 12px; }
+                .info-tag-container .fa.fa-desktop {
+                  font-size: 11px; }
+                .info-tag-container .fa.fa-external-link {
+                  width: auto;
+                  font-size: inherit;
+                  vertical-align: text-top; }
+              .info-tag-container .info-text {
+                font-size: 9px;
+                display: inline-block;
+                vertical-align: middle;
+                width: 139px; }
+            
+            .references-container .fa {
+              font-size: 14px; }
+            
+            .education-container .location {
+              padding-bottom: 6px;
+              font-weight: 400; }
+            
+            .education-container .specialization {
+              text-transform: none;
+              font-style: italic; }
+        </style>
+    </head>
+    
+    <body>
+        <main id="resume" class="page">
+            <header class="resume-header clearfix">
+                <div class="profile-header pull-left">
+                     <h1>Daniel Wong Yong Shen</h1>
+
+                     <h2>Junior, Bachelor of Computing, Computer Science</h2>
+
+                </div>
+                <div class="profile-pic pull-right"></div>
+            </header>
+            <div class="resume-content">
+                <aside class="left-column">
+                    <div class="container about-container">
+                        <div class="title">
+                             <h3>About</h3>
+
+                            <div class="keyline"></div>
+                        </div>
+                        <div class="info-tag-container"> <i class="fa fa-map-marker"></i>
+
+                             <h6 class="info-text">Singapore</h6>
+
+                        </div>
+                        <div class="info-tag-container"> <i class="fa fa-envelope-o"></i>
+
+                             <h6 class="info-text">me@danielwo.ng</h6>
+
+                        </div>
+                        <div class="info-tag-container"> <i class="fa fa-mobile"></i>
+
+                             <h6 class="info-text">+65 8123 8930</h6>
+
+                        </div>
+                        <div class="info-tag-container"> <i class="fa fa-desktop"></i>
+
+                             <h6 class="info-text">
+					                    <a href="danielwo.ng" target="_blank">
+					                        danielwo.ng <i class="fa fa-external-link" aria-hidden="true"></i>
+					                    </a>
+					                </h6>
+
+                        </div>
+                        <div class="info-tag-container"> <i class="fa fa-github"></i>
+
+                             <h6 class="info-text">
+					                                     <a href="https://github.com/danielwys" target="_blank">
+					                                         danielwys <i class="fa fa-external-link" aria-hidden="true"></i>
+					                                     </a>
+					                                 </h6>
+
+                        </div>
+                        <div class="info-tag-container"> <i class="fa fa-linkedin"></i>
+
+                             <h6 class="info-text">
+					                                     <a href="https://www.linkedin.com/in/danielwongys/" target="_blank">
+					                                         danielwongys <i class="fa fa-external-link" aria-hidden="true"></i>
+					                                     </a>
+					                                 </h6>
+
+                        </div>
+                        </section>
+                        <div class="skills-container">
+                            <section class="container">
+                                <div class="title">
+                                     <h3>Programming Languages</h3>
+
+                                    <div class="keyline"></div>
+                                </div>
+                                <ul class="minimal">
+                                    <li>
+                                        <h6>JavaScript</h6>
+                                    </li>
+                                    <li>
+                                        <h6>Java</h6>
+                                    </li>
+                                    <li>
+                                        <h6>Swift</h6>
+                                    </li>
+                                    <li>
+                                        <h6>Dart</h6>
+                                    </li>
+                                    <li>
+                                        <h6>SQL</h6>
+                                    </li>
+                                </ul>
+                            </section>
+                            <section class="container">
+                                <div class="title">
+                                     <h3>Frameworks</h3>
+
+                                    <div class="keyline"></div>
+                                </div>
+                                <ul class="minimal">
+                                    <li>
+                                        <h6>Flutter</h6>
+                                    </li>
+                                    <li>
+                                        <h6>UIKit</h6>
+                                    </li>
+                                    <li>
+                                        <h6>React</h6>
+                                    </li>
+                                    <li>
+                                        <h6>Node</h6>
+                                    </li>
+                                    <li>
+                                        <h6>PostgreSQL</h6>
+                                    </li>
+                                    <li>
+                                        <h6>Kubernetes</h6>
+                                    </li>
+                                </ul>
+                            </section>
+                        </div>
+                        <div class="container languages-container">
+                            <div class="title">
+                                 <h3>Languages</h3>
+
+                                <div class="keyline"></div>
+                            </div>
+                            <ul class="minimal">
+                                <li>
+                                     <h6>English <em>(Native Proficiency)</em></h6>
+
+                                </li>
+                                <li>
+                                     <h6>Chinese <em>(Professional Working Proficiency)</em></h6>
+
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="container interests-container">
+                            <div class="title">
+                                 <h3>Interests</h3>
+
+                                <div class="keyline"></div>
+                            </div>
+                            <section class="item">
+                                 <h4 class="bold">DIY &amp; Repair</h4>
+
+                                <ul class="minimal">
+                                    <li>I fix my own gadgets in my spare time</li>
+                                </ul>
+                            </section>
+                            <section class="item">
+                                 <h4 class="bold">Gadgets</h4>
+
+                                <ul class="minimal">
+                                    <li>I love trying the latest and greatest tech</li>
+                                </ul>
+                            </section>
+                            <section class="item">
+                                 <h4 class="bold">Coffee</h4>
+
+                                <ul class="minimal">
+                                    <li>I enjoy a daily routine of brewing espresso</li>
+                                </ul>
+                            </section>
+                        </div>
+                </aside>
+                <div class="right-column">
+                    <div class="container summary-container">
+                        <div class="title">
+                             <h3>Summary</h3>
+
+                            <div class="keyline"></div>
+                        </div>
+                        <p class="summary">Full-stack developer focusing on developing elegant solutions for real
+                            users</p>
+                    </div>
+                    <div class="container education-container">
+                        <div class="title">
+                             <h3>Education</h3>
+
+                            <div class="keyline"></div>
+                        </div>
+                        <section class="item">
+                            <div class="section-header clearfix">
+                                 <h3 class="bold pull-left">
+					            National University of Singapore
+					    </h3>
+
+                                 <h5 class="italic pull-right">
+					            <span class="startDate">08/2018</span>
+					            <span class="endDate"> - Present</span>
+					    </h5>
+
+                            </div>
+                             <h4>Bachelor of Computing, Computer Science</h4>
+
+                             <h5>CAP: 4.54</h5>
+
+                            <ul class="two-column">
+                                <li>Pursuing Artificial Intelligence and Computer Networks as Focus Areas</li>
+                                <li>Experienced in Software Engineering and Product Design from CS3216/7</li>
+                                <li>Former Teaching Assistant for CS2030 Programming Methodology (AY19/20
+                                    S2)</li>
+                            </ul>
+                        </section>
+                    </div>
+                    <div class="container work-container">
+                        <div class="title">
+                             <h3>Experience</h3>
+
+                            <div class="keyline"></div>
+                        </div>
+                        <section class="item">
+                            <div class="section-header clearfix">
+                                 <h3 class="bold pull-left">
+					                        <a href="https://usa.visa.com/visa-everywhere/blog/bdp/2020/07/01/a-virtual-internship-1593644079756.html" target="_blank">
+					                            Visa Inc. <i class="fa fa-external-link" aria-hidden="true"></i>
+					                        </a>
+					                </h3>
+
+                                 <h5 class="italic pull-right">
+					                        <span class="startDate">05/2020</span>
+					                        <span class="endDate"> - 07/2020</span>
+					                </h5>
+
+                            </div>
+                             <h4>Software Engineering Intern</h4>
+
+                            <ul>
+                                <li>1st Place in Visa Global Intern Hackathon</li>
+                                <li>Participated in the Global Intern Case Challenge</li>
+                                <li>6th in Intern X-Factor Challenge (Singapore &amp; India)</li>
+                            </ul>
+                        </section>
+                    </div>
+                    <div class="container work-container">
+                        <div class="title">
+                             <h3>Projects</h3>
+
+                            <div class="keyline"></div>
+                        </div>
+                        <section class="item">
+                            <div class="section-header clearfix">
+                                 <h3 class="bold pull-left">
+					                        <a href="https://piggybuy.app/" target="_blank">
+					                            PiggyBuy <i class="fa fa-external-link" aria-hidden="true"></i>
+					                        </a>
+					                </h3>
+
+                                 <h5 class="italic pull-right">
+					                        <span class="startDate">09/2020</span>
+					                        <span class="endDate"> - Present</span>
+					                </h5>
+
+                            </div>
+                             <h4>Visionary, Team Lead, Marketing Lead &amp; Full Stack Developer</h4>
+
+                            <p class="summary">PiggyBuy is a social commerce app that connects neighbours, enabling them
+                                to organise group buys to get discounts and save on shipping fees</p>
+                            <ul>
+                                <li>3rd Place in 17th NUS SoC Term Project Showcase (STePS)</li>
+                                <li>Available on App Store and Google Play, developed with Flutter and Firebase</li>
+                                <li>Conceived and proposed PiggyBuy as an innovative solution for a real problem</li>
+                                <li>Performed competitor analysis to validate market feasibility</li>
+                                <li>Conducted user surveys to establish user requirements and app features</li>
+                                <li>Lead marketing efforts, establishing social media direction and copywriting</li>
+                                <li>Created pitch deck and served as lead presenter for pitching sessions</li>
+                                <li>Implemented authentication, user profile, data integrity and backend integration</li>
+                                <li>Directed development timeline and work allocation amongst teammates</li>
+                            </ul>
+                        </section>
+                        <section class="item">
+                            <div class="section-header clearfix">
+                                 <h3 class="bold pull-left">
+					                        Ping2Pay
+					                </h3>
+
+                                 <h5 class="italic pull-right">
+					                        <span class="startDate">06/2020</span>
+					                        <span class="endDate"> - 07/2020</span>
+					                </h5>
+
+                            </div>
+                             <h4>Front-end Developer</h4>
+
+                            <p class="summary">Ping2Pay enables quick and secure peer-to-peer payments with Visa Direct
+                                through an in-chat payment interface that integrates with any chat application</p>
+                            <ul>
+                                <li>1st Place Winner in the Visa Global Intern Hackathon</li>
+                                <li>Created proof-of-concept application utilising React Native and Firebase</li>
+                                <li>Implemented real-time chat feature and backend integration</li>
+                            </ul>
+                        </section>
+                        <section class="item">
+                            <div class="section-header clearfix">
+                                 <h3 class="bold pull-left">
+					                        Modmates
+					                </h3>
+
+                                 <h5 class="italic pull-right">
+					                        <span class="startDate">08/2020</span>
+					                        <span class="endDate"> - 08/2020</span>
+					                </h5>
+
+                            </div>
+                             <h4>Team Lead</h4>
+
+                            <p class="summary">Modmates is a social network for university students to find friends and
+                                form groups with their peers, according to their university modules</p>
+                            <ul>
+                                <li>Created a fully-fledged interactive prototype with Figma</li>
+                                <li>Performed multiple rounds of user testing and interviews for design iterations</li>
+                                <li>Created task timeline with GANTT charts and facilitated conflict resolution</li>
+                            </ul>
+                        </section>
+                        <section class="item">
+                            <div class="section-header clearfix">
+                                 <h3 class="bold pull-left">
+					                        Q with Queue
+					                </h3>
+
+                                 <h5 class="italic pull-right">
+					                        <span class="startDate">03/2020</span>
+					                        <span class="endDate"> - 05/2020</span>
+					                </h5>
+
+                            </div>
+                             <h4>Full Stack Developer</h4>
+
+                            <p class="summary">Q with Queue is a restaurant management system that enables restaurants
+                                to take reservations and/or allow patrons to queue remotely for seats</p>
+                            <ul>
+                                <li>Developed a fully-featured iOS App for iPhone and iPad with Swift and
+                                    Firebase</li>
+                                <li>Handled user authentication, profile and data storage features</li>
+                                <li>Heavy emphasis placed on employing good software design principles</li>
+                            </ul>
+                        </section>
+                        <section class="item">
+                            <div class="section-header clearfix">
+                                 <h3 class="bold pull-left">
+					                        <a href="https://github.com/danielwys/FoodSloth/" target="_blank">
+					                            FoodSloth <i class="fa fa-external-link" aria-hidden="true"></i>
+					                        </a>
+					                </h3>
+
+                                 <h5 class="italic pull-right">
+					                        <span class="startDate">04/2020</span>
+					                        <span class="endDate"> - 05/2020</span>
+					                </h5>
+
+                            </div>
+                             <h4>Full Stack Developer</h4>
+
+                            <p class="summary">FoodSloth is a food delivery application developed to showcase the capabilities
+                                of SQL</p>
+                            <ul>
+                                <li>Ensured database schema was normalised to Boyce-Codd Normal Form (BCNF)</li>
+                                <li>Employed triggers to perform application logic and enforce data integrity</li>
+                                <li>Utilised views extensively to simplify data querying</li>
+                            </ul>
+                        </section>
+                    </div>
+                </div>
+                </div>
+        </main>
+    </body>
+
+</html>
